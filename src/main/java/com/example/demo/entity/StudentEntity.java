@@ -7,12 +7,13 @@ public class StudentEntity{
     private Integer id;
     private String email;
     private Date created;
-    public String getUsername(){
-        return name;
-    }public void Setusername(String name){
-        this.name=name;
-    }public getEmail(){
-        return Email;
-    }public void 
-
+    public Date getCreated(){
+        return created;
+    }
+    public IntegergetId(){
+        return id;
+    }
+    public void setId(Integer id){
+        this.id=id;
+    }
 }
