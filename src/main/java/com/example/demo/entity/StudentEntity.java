@@ -9,14 +9,14 @@ import jakarta.persistence.Id;
 public class StudentEntity{
     @Id 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     private String name;
     private String email;
     private Date created;
     public Date getCreated(){
         return created;
     }
-    public IntegergetId(){
+    public Integer getId(){
         return id;
     }
     public void setId(Integer id){
