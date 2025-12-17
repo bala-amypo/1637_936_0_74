@@ -4,5 +4,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
  public class StudentController{
-    @Autowired StudentService ser;                                  
+    @Autowired StudentService ser;
+
+    @PostMapping("/post")
+    public StudentEntity sendData(@)                                  
  }
