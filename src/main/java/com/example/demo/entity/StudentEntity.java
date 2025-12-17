@@ -7,4 +7,5 @@ public class StudentEntity{
     private Integer id;
     private String email;
     private Date created;
+    public String getUser
 }
