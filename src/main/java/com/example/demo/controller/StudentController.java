@@ -7,5 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
     @Autowired StudentService ser;
 
     @PostMapping("/post")
-    public StudentEntity sendData(@)                                  
+    public StudentEntity sendData(@RequestBody StudentEntity stu){
+        return ser.postData(stu);
+    }                                  
  }
