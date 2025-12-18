@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.StudentEntity;
 import com.example.demo.service.StudentService;
+import org.springframework.web.bind.annotation.GetMapping;
+import java.util.List;
 
 @RestController
  public class StudentController{
