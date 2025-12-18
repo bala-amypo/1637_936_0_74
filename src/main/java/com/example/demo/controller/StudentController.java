@@ -13,5 +13,9 @@ import com.example.demo.service.StudentService;
     @PostMapping("/post")
     public StudentEntity sendData(@RequestBody StudentEntity stu){
         return ser.postData(stu);
-    }                                  
+    }  
+    @GetMapping("/get")
+    public List<StudentEntity> getval(){
+        return service.getAllData();
+    }                                
  }
