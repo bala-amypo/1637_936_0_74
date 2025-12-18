@@ -22,13 +22,13 @@ public class ValidationEntity{
     public Date getCreated(){
         return created;
     }
-    public Integer getId(){
+    public Long getId(){
         return id;
     }
-    public void setId(Integer id){
+    public void setId(Long id){
         this.id=id;
     }
-    public String getName(){
+    public String getUsername(){
         return name;
     }
     public void setName(String name){
@@ -46,7 +46,14 @@ public class ValidationEntity{
     public void setPassword(String password){
         this.password=password;
     }
-    public StudentEntity(Integer id,String name,String email,String password,Date created){
+    public integer getAge(){
+    return age;
+    }
+    public void setAge(Integer age){
+        this.age=age;
+    }
+    
+        public StudentEntity(Integer id,String name,String email,String password,Date created){
         this.id=id;
         this.name=name;
         this.email=email;
