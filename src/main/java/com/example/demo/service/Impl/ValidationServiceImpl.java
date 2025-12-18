@@ -1,42 +1,17 @@
-package com.example.demo.service.Impl;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package com.example.demo.service.impl;
+import java.util.*;
 import com.example.demo.service.ValidationService;
+import com.example.demo.repository.ValidationRepo;
 import com.example.demo.entity.ValidationEntity;
-import com.example.demo.repository.ValidationRepository;
-import java.util.List;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class ValidationServiceImpl implements ValidationService{
-    @Autowired ValidationRepo repository;
-    // save()
-    // findAll()
-    // findById()
-    // deleteById()
-    // exisById()
-    @Override
-    public ValidationEntity postData(ValidationEntity stu){
-        return repository.save(stu);
-    }
-    @Override
-    public List<ValidationEntity>getAllData(){
-        return repository.findAll();
-    }
-    @Override
-    public String DeleteData(Long id){
-        repository.deleteById(id);
-        return "Deleted Successfully";
-    }
-    @Override
-    public ValidationEntity getData(Long id){
-        return repository.findById(id).orElse(null);
-    }
-    @Override
-    public ValidationEntity updateData(int id,ValidationEntity entity){
-        if(repository.existsById(id)){
-            entity.setId(id);
-            return repository.save(entity);
-        }
-        return null;
-    }
+     @Autowired ValidationRepo dent;
+     
+          @Override
+          public ValidationEntity post(ValidationEntity stu){
+               return dent.save(stu);
+          }
 }

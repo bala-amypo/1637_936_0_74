@@ -19,4 +19,4 @@ import java.util.List;
     public ValidationEntity sendData(@RequestBody ValidationEntity stu){
         return ser.postData(stu);
     }  
-    
+ }
