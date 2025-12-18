@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.StudentEntity;
 import com.example.demo.service.StudentService;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
@@ -19,5 +20,7 @@ import java.util.List;
     @GetMapping("/get")
     public List<StudentEntity> getval(){
         return ser.getAllData();
-    }                                
+    }            
+    @DeleteMapping("/delete/{id}")
+    public String deleteval(2)                    
  }
