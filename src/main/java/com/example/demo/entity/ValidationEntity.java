@@ -9,14 +9,51 @@ public class ValidationEntity{
     @GenerateValue(stratergy=GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @Size(min=2,max=30,message="must be 2 to 10 characterk")
+    @Size(min=2,max=30,message="must be 2 to 10 character")
     private String username;
     @Email(message="Email is not valid")
     private String email;
-    @Max(6)
+    @Size(min =2,max=0,message="must be 2 to 10 character")
     @NotNull(message = "Passord is mandatory")
     @Max(30)
     private String password;
     @Positive(message ="Age must be a positive number")
     private Int age;
+    public Date getCreated(){
+        return created;
+    }
+    public Integer getId(){
+        return id;
+    }
+    public void setId(Integer id){
+        this.id=id;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public void setEmail(String email){
+        this.email=email;
+    }
+    public String getPassword(){
+        return password;
+    }
+    public void setPassword(String password){
+        this.password=password;
+    }
+    public StudentEntity(Integer id,String name,String email,String password,Date created){
+        this.id=id;
+        this.name=name;
+        this.email=email;
+        this.password=password;
+        this.created=created;
+    }
+    public StudentEntity(){
+
+    }
 }
