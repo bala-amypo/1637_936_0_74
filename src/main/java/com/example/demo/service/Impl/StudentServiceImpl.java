@@ -22,7 +22,7 @@ public class StudentServiceImpl implements StudentService{
 
     }
     @Override
-     public List<StudentEntity>getAllData();
+     public List<StudentEntity>getAllData(){
      return student.findAll();
-
+}
 }
