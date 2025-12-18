@@ -8,7 +8,7 @@ import com.example.demo.service.StudentService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.UpdateMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import java.util.List;
 
 @RestController
@@ -33,6 +33,6 @@ import java.util.List;
     }
     @PutMapping("/put/{id}")
      public StudentEntity putdataid(@PathVariable int id,@RequestBody StudentEntity entity){
-        return service.updateData(id,entity);
+        return ser.updateData(id,entity);
  }
  }
