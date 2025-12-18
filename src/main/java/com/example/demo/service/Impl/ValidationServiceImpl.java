@@ -3,12 +3,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.service.ValidationService;
 import com.example.demo.entity.ValidationEntity;
-import com.example.demo.repository.ValidationRepo;
+import com.example.demo.repository.ValidationRepository;
 import java.util.List;
 
 @Service
 public class ValidationServiceImpl implements ValidationService{
-    @Autowired ValidationRepo repo;
+    @Autowired ValidationRepo repository;
     // save()
     // findAll()
     // findById()
@@ -16,26 +16,26 @@ public class ValidationServiceImpl implements ValidationService{
     // exisById()
     @Override
     public ValidationEntity postData(ValidationEntity stu){
-        return repo.save(stu);
+        return repository.save(stu);
     }
     @Override
     public List<ValidationEntity>getAllData(){
-        return repo.findAll();
+        return repository.findAll();
     }
     @Override
     public String DeleteData(Long id){
-        repo.deleteById(id);
+        repository.deleteById(id);
         return "Deleted Successfully";
     }
     @Override
     public ValidationEntity getData(Long id){
-        return repo.findById(id).orElse(null);
+        return repository.findById(id).orElse(null);
     }
     @Override
     public ValidationEntity updateData(int id,ValidationEntity entity){
-        if(repo.existsById(id)){
+        if(repository.existsById(id)){
             entity.setId(id);
-            return repo.save(entity);
+            return repository.save(entity);
         }
         return null;
     }
