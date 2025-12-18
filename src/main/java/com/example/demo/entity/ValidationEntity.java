@@ -33,7 +33,7 @@ public class ValidationEntity{
     String password,
     @Max(30)
     @Positive(message="Age must be a Positive number")
-    Integer age){
+    int age){
         this.id=id;
         this.username=username;
         this.age=age;
