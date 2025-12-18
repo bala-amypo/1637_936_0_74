@@ -32,7 +32,7 @@ import java.util.List;
         return ser.getData(id);
     }
     @PutMapping("/put/{id}")
-     public StudentEntity getdataid(@PathVariable int id,@RequestBody StudentEntity entity){
-        return service.updateData(id,entity)l;
+     public StudentEntity putdataid(@PathVariable int id,@RequestBody StudentEntity entity){
+        return service.updateData(id,entity);
  }
  }
