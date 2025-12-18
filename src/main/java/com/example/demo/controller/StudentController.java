@@ -26,4 +26,8 @@ import java.util.List;
     public String deleteData(@PathVariable int id){
     return ser.DeleteData(id);           
     }        
+    @GetMapping("getid/{id}")
+    public StudentEntity getdataid(@pathVariable int id){
+        return service.getdata(id);
+    }
  }
