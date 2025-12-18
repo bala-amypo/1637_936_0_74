@@ -28,6 +28,6 @@ import java.util.List;
     }        
     @GetMapping("getid/{id}")
     public StudentEntity getdataid(@PathVariable int id){
-        return ser.getdata(id);
+        return ser.getData(id);
     }
  }
