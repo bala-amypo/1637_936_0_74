@@ -22,5 +22,6 @@ import java.util.List;
         return ser.getAllData();
     }            
     @DeleteMapping("/delete/{id}")
-    public String deleteval()                    
+    public String deleteData(@PathVariable int id){
+    return ser.deleteById() ;                   
  }
