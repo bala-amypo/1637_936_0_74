@@ -52,15 +52,7 @@ public class ValidationEntity{
     public void setAge(Integer age){
         this.age=age;
     }
-    
-        public StudentEntity(Integer id,String name,String email,String password,Date created){
-        this.id=id;
-        this.name=name;
-        this.email=email;
-        this.password=password;
-        this.created=created;
-    }
-    public StudentEntity(){
-
+    public ValidationEntity(Long id,
+    @NotNull)
     }
 }
